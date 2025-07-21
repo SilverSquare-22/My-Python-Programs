@@ -13,7 +13,7 @@ def pw_generate ():
         elif ch in chs [62:]:
             cl [2] = 1
 pw_generate ()
-if sum (cl) != 3:
+while sum (cl) != 3:
     pw = ''
     pw_generate ()
 print ('Your password is:', pw, sep = '\n')
