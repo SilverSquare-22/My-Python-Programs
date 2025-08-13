@@ -1,6 +1,6 @@
 import random as r
 import tkinter as tk
-chs, pw, c, l, cl = r'''ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~?''', '', 0, r.randrange (8, 16), [0, 0, 0]
+chs, pw, l, cl = r'''ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~?''', '', r.randrange (8, 16), [0, 0, 0]
 def pw_generate ():
     global pw
     for i in range (l):
@@ -13,7 +13,7 @@ def pw_generate ():
         elif ch in chs [62:]:
             cl [2] = 1
 pw_generate ()
-if sum (cl) != 3:
+while sum (cl) != 3:
     pw = ''
     pw_generate ()
 print ('Your password is:', pw, sep = '\n')
